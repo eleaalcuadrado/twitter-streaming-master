@@ -22,7 +22,11 @@ repositories {
 }
 
 dependencies {
-
+	compile 'org.neo4j.driver:neo4j-java-driver:1.0.6'
+	compile 'com.google.guava:guava:15.0'
+	compile 'org.apache.commons:commons-io:1.3.2'
+    compile 'org.apache.commons:commons-lang3:3.0'
+	
 	compile group: 'org.twitter4j', name: 'twitter4j-stream', version: '4.0.5'
 	compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.5' 
 	compile 'javax:javaee-api:7.0'
@@ -30,7 +34,12 @@ dependencies {
 	compile 'mysql:mysql-connector-java:5.1.30'
 	testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-simple:2.17'
 	testCompile 'javax.servlet:javax.servlet-api:3.1.0'
- 	compile 'org.mongodb:mongo-java-driver:3.3.0'  }
+ 	compile 'org.mongodb:mongo-java-driver:3.3.0'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    compile 'org.json:json:20160212'
+ }
+
+
 
 war {
     from 'src/main/webapp' // adds a file-set to the root of the archive
